@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Creepster&family=Montserrat&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <title>Interactive Period Table</title>
+</head>
+<body>
+
+    <div class="navbar">
+        <ul class="first">
+            <li id="buttonalkali">Alkali Metals</li>
+            <li id="buttonalkaline">Alkaline Earth Metals</li>
+            <li id="buttonlan">Lanthanides</li>
+            <li id="buttonact">Actinides</li>
+            <li id="buttontrans">Transition Metals</li>
+            <li id="buttonposttrans">Post-transition Metals</li>
+            <li id="buttonmetalloids">Metalloids</li>
+        </ul>
+        <ul class="second">       
+            <li id="buttonreact">Reactive Non-Metals</li>
+            <li id="buttonnoble">Noble Gases</li>
+            <li id="buttonunknown">Unknown Properties</li>
+        </ul>
+    </div>
+
+    <div class="container">
+    <ol class="periodic-table">
+        <li class="hydrogen reactive-nonmetal alkali" id="alkali" data-atomic-number="1" data-atomic-mass="1.008">
+            <name title="Hydrogen">H</name>
+            <span title="Hydrogen" class="info">Hydrogen</span>
+        </li>
+        <li id="helium" class="noble-gas" data-atomic-number="2" data-atomic-mass="4.0026">
+            <name title="Helium">He</name>
+            <span title="Helium" class="info">Helium</span>
+        </li>
+        <li class="alkali" id="alkali" data-atomic-number="3" data-atomic-mass="6.94">
+            <name title="Lithium">Li</name>
+            <span title="Lithium" class="info">Lithium</span>
+        </li>
+        <li class="alkaline" data-atomic-number="4" data-atomic-mass="9.0122">
+            <name title="Beryllium">Be</name>
+            <span title="Beryllium" class="info">Beryllium</span>
+        </li>
+        <li id="boron" class="metalloid" data-atomic-number="5" data-atomic-mass="10.81">
+            <name title="Boron">B</name>
+            <span title="Boron" class="info">Boron</span>
+        </li>
+        <li class="reactive-nonmetal" data-atomic-number="6" data-atomic-mass="12.011">
+            <name title="Carbon">C</name>
+            <span title="Carbon" class="info">Carbon</span>
+        </li>
+        <li class="reactive-nonmetal" data-atomic-number="7" data-atomic-mass="14.007">
+            <name title="Nitrogen">N</name>
+            <span title="Nitrogen" class="info">Nitrogen</span>
+        </li>
+        <li class="reactive-nonmetal" data-atomic-number="8" data-atomic-mass="15.999">
+            <name title="Oxygen">O</name>
+            <span title="Oxygen" class="info">Oxygen</span>
+        </li>
+        <li class="reactive-nonmetal" data-atomic-number="9" data-atomic-mass="18.998">
+            <name title="Fluorine">F</name>
+            <span title="Fluorine" class="info">Fluorine</span>
+        </li>
+        <li class="noble-gas" data-atomic-number="10" data-atomic-mass="20.180">
+            <name title="Neon">Ne</name>
+            <span title="Neon" class="info">Neon</span>
+        </li>
+        <li class="alkali" id="alkali" data-atomic-number="11" data-atomic-mass="22.990">
+            <name title="Sodium">Na</name>
+            <span title="Sodium" class="info">Sodium</span>
+        </li>
+        <li class="alkaline" id="alkali" data-atomic-number="12" data-atomic-mass="24.305">
+            <name title="Magnesium">Mg</name>
+            <span title="Magnesium" class="info">Magnesium</span>
+        </li>
+        <li id="aluminium" class="post-transition" data-atomic-number="13" data-atomic-mass="26.982">
+            <name title="Aluminium">Al</name>
+            <span title="Aluminium" class="info">Aluminium</span>
+        </li>
+        <li class="metalloid" data-atomic-number="14" data-atomic-mass="28.085">
+            <name title="Silicon">Si</name>
+            <span title="Silicon" class="info">Silicon</span>
+        </li>
+        <li class="reactive-nonmetal" data-atomic-number="15" data-atomic-mass="30.974">
+            <name title="Phosphorus">P</name>
+            <span title="Phosphorus" class="info">Phosphorus</span>
+        </li>
+        <li class="reactive-nonmetal" data-atomic-number="16" data-atomic-mass="32.06">
+            <name title="Sulphur">S</name>
+            <span title="Sulphur" class="info">Sulphur</span>
+        </li>
+        <li class="reactive-nonmetal" data-atomic-number="17" data-atomic-mass="35.45">
+            <name title="Chlorine">Cl</name>
+            <span title="Chlorine" class="info">Chlorine</span>
+        </li>
+        <li class="noble-gas" data-atomic-number="18" data-atomic-mass="39.948">
+            <name title="Argon">Ar</name>
+            <span title="Argon" class="info">Argon</span>
+        </li>
+        <li class="alkali" id="alkali" data-atomic-number="19" data-atomic-mass="39.098">
+            <name title="Potassium">K</name>
+            <span title="Potassium" class="info">Potassium</span>
+        </li>
+        <li class="alkaline" id="alkali" data-atomic-number="20" data-atomic-mass="40.078">
+            <name title="Calcium">Ca</name>
+            <span title="Calcium" class="info">Calcium</span>
+        </li>
+        <li class="transition" data-atomic-number="21" data-atomic-mass="44.956">
+            <name title="Scandium">Sc</name>
+            <span title="Scandium" class="info">Scandium</span>
+        </li>
+        <li class="transition" data-atomic-number="22" data-atomic-mass="47.867">
+            <name title="Titanium">Ti</name>
+            <span title="Titanium" class="info">Titanium</span>
+        </li>
+        <li class="transition">
+            <name title="Vanadium">Ti</name>
+            <span title="Vanadium" class="info">Vanadium</span>
+        </li>
+        <li class="transition">
+            <name title="Chromium">Cr</name>
+            <span title="Chromium" class="info">Chromium</span>
+        </li>
+        <li class="transition">
+            <name title="Manganese">Mn</name>
+            <span title="Manganese" class="info">Manganese</span>
+        </li>
+        <li class="transition">
+            <name title="Iron">Fe</name>
+            <span title="Iron" class="info">Iron</span>
+        </li>
+        <li class="transition">
+            <name title="Cobalt">Co</name>
+            <span title="Cobalt" class="info">Cobalt</span>
+        </li>
+        <li class="transition">
+            <name title="Nickel">Ni</name>
+            <span title="Nickel" class="info">Nickel</span>
+        </li>
+        <li class="transition">
+            <name title="Copper">Cu</name>
+            <span title="Copper" class="info">Copper</span>
+        </li>
+        <li class="transition">
+            <name title="Zinc">Zn</name>
+            <span title="Zinc" class="info">Zinc</span>
+        </li>
+        <li class="post-transition">
+            <name title="Gallium">Ga</name>
+            <span title="Gallium" class="info">Gallium</span>
+        </li>
+        <li class="metalloid">
+            <name title="Germanium">Ge</name>
+            <span title="Germanium" class="info">Germanium</span>
+        </li>
+        <li class="metalloid">
+            <name title="Arsenic">As</name>
+            <span title="Arsenic" class="info">Arsenic</span>
+        </li>
+        <li class="reactive-nonmetal">
+            <name title="Selenium">Se</name>
+            <span title="Selenium" class="info">Selenium</span>
+        </li>
+        <li class="reactive-nonmetal">
+            <name title="Bromine">Br</name>
+            <span title="Bromine" class="info">Bromine</span>
+        </li>
+        <li class="noble-gas">
+            <name title="Krypton">Kr</name>
+            <span title="Krypton" class="info">Krypton</span>
+        </li>
+        <li class="alkali" id="alkali">
+            <name title="Rubidium">Rb</name>
+            <span title="Rubidium" class="info">Rubidium</span>
+        </li>
+        <li class="alkaline">
+            <name title="Strontium">Sr</name>
+            <span title="Strontium" class="info">Strontium</span>
+        </li>
+        <li class="transition">
+            <name title="Yttrium">Y</name>
+            <span title="Yttrium" class="info">Yttrium</span>
+        </li>
+        <li class="transition">
+            <name title="Zirconium">Zr</name>
+            <span title="Zirconium" class="info">Zirconium</span>
+        </li>
+        <li class="transition">
+            <name title="Niobium">Nb</name>
+            <span title="Niobium" class="info">Niobium</span>
+        </li>
+        <li class="transition">
+            <name title="Molybdenum">Mo</name>
+            <span title="Molybdenum" class="info">Molybdenum</span>
+        </li>
+        <li class="transition">
+            <name title="Technetium">Tc</name>
+            <span title="Technetium" class="info">Technetium</span>
+        </li>
+        <li class="transition">
+            <name title="Ruthenium">Ru</name>
+            <span title="Ruthenium" class="info">Ruthenium</span>
+        </li>
+        <li class="transition">
+            <name title="Rhodium">Ro</name>
+            <span title="Rhodium" class="info">Rhodium</span>
+        </li>
+        <li class="transition">
+            <name title="Palladium">Pd</name>
+            <span title="Palladium" class="info">Palladium</span>
+        </li>
+        <li class="transition">
+            <name title="Silver">Ag</name>
+            <span title="Silver" class="info">Silver</span>
+        </li>
+        <li class="transition">
+            <name title="Cadmium">Cd</name>
+            <span title="Cadmium" class="info">Cadmium</span>
+        </li>
+        <li class="post-transition">
+            <name title="Indium">In</name>
+            <span title="Indium" class="info">Indium</span>
+        </li>
+        <li class="post-transition">
+            <name title="Tin">Sn</name>
+            <span title="Tin" class="info">Tin</span>
+        </li>
+        <li class="metalloid">
+            <name title="Antimony">Sb</name>
+            <span title="Antimony" class="info">Antimony</span>
+        </li>
+        <li class="metalloid">
+            <name title="Tellurium">Te</name>
+            <span title="Tellurium" class="info">Tellurium</span>
+        </li>
+        <li class="reactive-nonmetal">
+            <name title="Iodine">I</name>
+            <span title="Iodine" class="info">Iodine</span>
+        </li>
+        <li class="noble-gas">
+            <name title="Xenon">Xe</name>
+            <span title="Xenon" class="info">Xenon</span>
+        </li>
+        <li class="alkali" id="alkali">
+            <name title="Caesium">Cs</name>
+            <span title="Caesium" class="info">Caesium</span>
+        </li>
+        <li class="alkaline">
+            <name title="Barium">Ba</name>
+            <span title="Barium" class="info">Barium</span>
+        </li>
+        <li class="lanthanide">
+            <name title="Lanthanum">La</name>
+            <span title="Lanthanum" class="info">Lanthanum</span>
+        </li>
+        <li id="series1" class="lanthanide">
+            <name title="Cerium">Ce</name>
+            <span title="Cerium" class="info">Cerium</span>
+        </li>
+        <li id="series1" class="lanthanide">
+            <name title="Praseodymium">Pr</name>
+            <span title="Praseodymium" class="info overextend">Praseodymium</span>
+        </li>
+        <li id="series1" class="lanthanide">
+            <name title="Neodymium">Nd</name>
+            <span title="Neodymium" class="info">Neodymium</span>
+        </li>
+        <li id="series1" class="lanthanide">
+            <name title="Promethium">Pm</name>
+            <span title="Promethium" class="info">Promethium</span>
+        </li>
+        <li id="series1" class="lanthanide">
+            <name title="Samarium">Sm</name>
+            <span title="Samarium" class="info">Samarium</span>
+        </li>
+        <li id="series1" class="lanthanide">
+            <name title="Europium">Eu</name>
+            <span title="Europium" class="info">Europium</span>
+        </li>
+        <li id="series1" class="lanthanide">
+            <name title="Gadolinium">Gd</name>
+            <span title="Gadolinium" class="info">Gadolinium</span>
+        </li>
+        <li id="series1" class="lanthanide">
+            <name title="Terbium">Td</name>
+            <span title="Terbium" class="info">Terbium</span>
+        </li>
+        <li id="series1" class="lanthanide">
+            <name title="Dysprosium">Dy</name>
+            <span title="Dysprosium" class="info">Dysprosium</span>
+        </li>
+        <li id="series1" class="lanthanide">
+            <name title="Holmium">Ho</name>
+            <span title="Holmium" class="info">Holmium</span>
+        </li>
+        <li id="series1" class="lanthanide">
+            <name title="Erbium">Er</name>
+            <span title="Erbium" class="info">Erbium</span>
+        </li>
+        <li id="series1" class="lanthanide">
+            <name title="Thulium">Tm</name>
+            <span title="Thulium" class="info">Thulium</span>
+        </li>
+        <li id="series1" class="lanthanide">
+            <name title="Ytterbium">Yb</name>
+            <span title="Ytterbium" class="info">Ytterbium</span>
+        </li>
+        <li id="series1" class="lanthanide">
+            <name title="Lutetium">Lu</name>
+            <span title="Lutetium" class="info">Lutetium</span>
+        </li>  
+        <li id="hafnium" class="transition">
+            <name title="Hafnium">Hf</name>
+            <span title="Hafnium" class="info">Hafnium</span>
+        </li>
+        <li class="transition">
+            <name title="Tantalum">Ta</name>
+            <span title="Tantalum" class="info">Tantalum</span>
+        </li>
+        <li class="transition">
+            <name title="Tungsten">W</name>
+            <span title="Tungsten" class="info">Tungsten</span>
+        </li>
+        <li class="transition">
+            <name title="Rhenium">Re</name>
+            <span title="Rhenium" class="info">Rhenium</span>
+        </li>
+        <li class="transition">
+            <name title="Osmium">Os</name>
+            <span title="Osmium" class="info">Osmium</span>
+        </li> 
+        <li class="transition">
+            <name title="Iridium">Ir</name>
+            <span title="Iridium" class="info">Iridium</span>
+        </li>
+        <li class="transition">
+            <name title="Platinum">Pt</name>
+            <span title="Platinum" class="info">Platinum</span>
+        </li>
+        <li class="transition">
+            <name title="Gold">Au</name>
+            <span title="Gold" class="info">Gold</span>
+        </li>
+        <li class="transition">
+            <name title="Mercury">Hg</name>
+            <span title="Mercury" class="info">Mercury</span>
+        </li>
+        <li class="post-transition">
+            <name title="Thallium">Tl</name>
+            <span title="Thallium" class="info">Thallium</span>
+        </li>
+        <li class="post-transition">
+            <name title="Lead">Pb</name>
+            <span title="Lead" class="info">Lead</span>
+        </li>
+        <li class="post-transition">
+            <name title="Bismuth">Bi</name>
+            <span title="Bismuth" class="info">Bismuth</span>
+        </li>
+        <li class="post-transition">
+            <name title="Polonium">Po</name>
+            <span title="Polonium" class="info">Polonium</span>
+        </li>
+        <li class="metalloid">
+            <name title="Astatine">At</name>
+            <span title="Astatine" class="info">Astatine</span>
+        </li>
+        <li class="noble-gas">
+            <name title="Radon">Rn</name>
+            <span title="Radon" class="info">Radon</span>
+        </li>
+        <li class="alkali" id="alkali">
+            <name title="Francium">Fr</name>
+            <span title="Francium" class="info">Francium</span>
+        </li>
+        <li class="alkaline">
+            <name title="Radium">Ra</name>
+            <span title="Radium" class="info">Radium</span>
+        </li>
+        <li class="actinide">
+            <name title="Actinium">Ac</name>
+            <span title="Actinium" class="info">Actinium</span>
+        </li>
+        <li class="actinide" id="series2">
+            <name title="Thorium">Th</name>
+            <span title="Thorium" class="info">Thorium</span>
+        </li>
+        <li class="actinide" id="series2">
+            <name title="Protactinium">Pa</name>
+            <span title="Protactinium" class="info">Protactinium</span>
+        </li>
+        <li class="actinide" id="series2">
+            <name title="Uranium">U</name>
+            <span title="Uranium" class="info">Uranium</span>
+        </li>
+        <li class="actinide" id="series2">
+            <name title="Neptunium">Np</name>
+            <span title="Neptunium" class="info">Neptunium</span>
+        </li>
+        <li class="actinide" id="series2">
+            <name title="Plutonium">Up</name>
+            <span title="Plutonium" class="info">Plutonium</span>
+        </li>
+        <li class="actinide" id="series2">
+            <name title="Americium">Am</name>
+            <span title="Americium" class="info">Americium</span>
+        </li>
+        <li class="actinide" id="series2">
+            <name title="Curium">Cm</name>
+            <span title="Curium" class="info">Curium</span>
+        </li>
+        <li class="actinide" id="series2">
+            <name title="Berkelium">Bk</name>
+            <span title="Berkelium" class="info">Berkelium</span>
+        </li>
+        <li class="actinide" id="series2">
+            <name title="Californium">Cf</name>
+            <span title="Californium" class="info">Californium</span>
+        </li>
+        <li class="actinide" id="series2">
+            <name title="Einsteinium">Es</name>
+            <span title="Einsteinium" class="info">Einsteinium</span>
+        </li>
+        <li class="actinide" id="series2">
+            <name title="Fermium">Fm</name>
+            <span title="Fermium" class="info">Fermium</span>
+        </li>
+        <li class="actinide" id="series2">
+            <name title="Mendelevium">Md</name>
+            <span title="Mendelevium" class="info">Mendelevium</span>
+        </li>
+        <li class="actinide" id="series2">
+            <name title="Nobelium">No</name>
+            <span title="Nobelium" class="info">Nobelium</span>
+        </li>
+        <li class="actinide" id="series2">
+            <name title="Lawrencium">Lr</name>
+            <span title="Lawrencium" class="info">Lawrencium</span>
+        </li>
+        <li id="rutherfordium" class="transition">
+            <name title="Rutherfordium">Rf</name>
+            <span title="Rutherfordium" class="info overextend">Rutherfordium</span>
+        </li>
+        <li class="transition">
+            <name title="Dubnium">Db</name>
+            <span title="Dubnium" class="info">Dubnium</span>
+        </li>
+        <li class="transition">
+            <name title="Seaborgium">Sg</name>
+            <span title="Seaborgium" class="info">Seaborgium</span>
+        </li>
+        <li class="transition">
+            <name title="Bohrium">Bh</name>
+            <span title="Bohrium" class="info">Bohrium</span>
+        </li>
+        <li class="transition">
+            <name title="Hassium">Hs</name>
+            <span title="Hassium" class="info">Hassium</span>
+        </li>
+        <li class="unknown">
+            <name title="Meitnerium">Mt</name>
+            <span title="Meitnerium" class="info">Meitnerium</span>
+        </li>
+        <li class="unknown">
+            <name title="Darmstadtium">Ds</name>
+            <span title="Darmstadtium" class="info">Darmstadtium</span>
+        </li>
+        <li class="unknown">
+            <name title="Roentgenium">Rg</name>
+            <span title="Roentgenium" class="info">Roentgenium</span>
+        </li>
+        <li class="unknown">
+            <name title="Copernicium">Cn</name>
+            <span title="Copernicium" class="info">Copernicium</span>
+        </li>
+        <li class="unknown">
+            <name title="Nihonium">Nh</name>
+            <span title="Nihonium" class="info">Nihonium</span>
+        </li>
+        <li class="unknown">
+            <name title="Flerovium">Fl</name>
+            <span title="Flerovium" class="info">Flerovium</span>
+        </li>
+        <li class="unknown">
+            <name title="Moscovium">Mc</name>
+            <span title="Moscovium" class="info">Moscovium</span>
+        </li>
+        <li class="unknown">
+            <name title="Livermorium">Lv</name>
+            <span title="Livermorium" class="info">Livermorium</span>
+        </li>
+        <li class="unknown">
+            <name title="Tennessine">Ts</name>
+            <span title="Tennessine" class="info">Tennessine</span>
+        </li>
+        <li class="unknown">
+            <name title="Oganesson">Og</name>
+            <span title="Oganesson" class="info">Oganesson</span>
+        </li>
+        </ol>
+    </div>
+        
+    <div id="element-info">
+        <h2 id="element-name"></h2>
+        <p id="element-number"></p>
+        <p id="element-mass"></p>
+        <p id="element-configuration"></p>
+        <p id="element-description"></p>
+    </div>
+
+</body>
+
+
+<script>
+
+$(document).ready(function() {
+
+            $('.alkali').click(function() {
+                $('.periodic-table li').not('.alkali').addClass('blur');
+                $('.periodic-table .alkali').removeClass('blur');
+            });
+
+            $('.alkaline').click(function() {
+                $('.periodic-table li').not('.alkaline').addClass('blur');
+                $('.periodic-table .alkaline').removeClass('blur');
+            });
+
+            $('.metalloid').click(function() {
+                $('.periodic-table li').not('.metalloid').addClass('blur');
+                $('.periodic-table .metalloid').removeClass('blur');
+            });
+
+            $('.reactive-nonmetal').click(function() {
+                $('.periodic-table li').not('.reactive-nonmetal').addClass('blur');
+                $('.periodic-table .reactive-nonmetal').removeClass('blur');
+            });
+
+            $('.noble-gas').click(function() {
+                $('.periodic-table li').not('.noble-gas').addClass('blur');
+                $('.periodic-table .noble-gas').removeClass('blur');
+            });
+
+            $('.transition').click(function() {
+                $('.periodic-table li').not('.transition').addClass('blur');
+                $('.periodic-table .transition').removeClass('blur');
+            });
+
+            $('.post-transition').click(function() {
+                $('.periodic-table li').not('.post-transition').addClass('blur');
+                $('.periodic-table .post-transition').removeClass('blur');
+            });
+
+            $('.lanthanide').click(function() {
+                $('.periodic-table li').not('.lanthanide').addClass('blur');
+                $('.periodic-table .lanthanide').removeClass('blur');
+            });
+
+            $('.actinide').click(function() {
+                $('.periodic-table li').not('.actinide').addClass('blur');
+                $('.periodic-table .actinide').removeClass('blur');
+            });
+
+            $('.unknown').click(function() {
+                $('.periodic-table li').not('.unknown').addClass('blur');
+                $('.periodic-table .unknown').removeClass('blur');
+            });
+
+            function resetElements() {
+                $('.periodic-table li').removeClass('blur');
+            }
+
+            $('.navbar li').click(function() {
+                resetElements();
+            });
+
+            $('.navbar').click(function() {
+                resetElements();
+            });
+        });
+</script>
+<script src="../JS/script.js"></script>
+<script src="../JS/main.js"></script>
+<script src="../JS/elem.js"></script>
+
+</html>

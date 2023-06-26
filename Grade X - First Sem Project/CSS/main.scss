@@ -1,0 +1,262 @@
+*{
+
+    max-block-size: 100%;
+    max-height: 100%;
+}
+
+body{
+
+    margin: 2vw;
+    padding: 8px;
+    background-color: #070b0f;
+    background-blend-mode: color-burn;
+}
+
+.navbar{
+    
+    list-style-type: none;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: max-content auto max-content;
+    justify-items: center;
+    align-items: center;
+    column-gap: 20px;
+    color: aliceblue;
+    z-index: 1;
+      
+    .first{
+        
+        list-style-type: none;
+        display: flex;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        flex-direction: row;
+        justify-content: start;
+        position: absolute;
+        top: 9%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+
+    .second{
+
+        list-style-type: none;
+        display: flex;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        flex-direction: row;
+        justify-content: start;
+        position: absolute;
+        top: 16%;
+        left: 38%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+
+    li{
+        margin-left: 50px;
+        font-size: 15px;
+    }
+}
+
+.blurred{
+
+    opacity: 0.4;
+    transition: opacity 0.2s ease;
+}
+
+.periodic-table #alkali{
+
+    position: relative;
+    z-index: 2;
+}
+
+#buttonalkali{
+
+    color: #5B84B1FF;
+    cursor: pointer;
+
+}
+
+#buttonalkaline{
+
+    color: #FC766AFF;
+    cursor: pointer;
+
+}
+
+#buttonlan{
+
+    color: #BF94E4;
+    cursor: pointer;
+
+}
+
+#buttonact{
+
+    color: #A8C66C;
+    cursor: pointer;
+
+}
+
+#buttontrans{
+
+    color: #8BBEE8FF;
+    cursor: pointer;
+
+}
+
+
+#buttonposttrans{
+
+    color: #95DBE5FF;
+    cursor: pointer;
+
+}
+
+#buttonmetalloids{
+
+    color: #078282FF;
+    cursor: pointer;
+
+}
+
+#buttonreact{
+
+    color: #339E66FF;
+    cursor: pointer;
+
+}
+
+#buttonnoble{
+
+    color: #008C76FF;
+    cursor: pointer;
+
+}
+
+#buttonunknown{
+
+    color: #A8D5BAFF;
+    cursor: pointer;
+}
+
+.info{
+
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: self-end;
+    height: 3.5vw;
+    font-size: 10px;
+}
+
+.alkali:hover {
+    
+    transform: scale(1.1);
+    background: #000;
+    cursor: pointer;
+}
+
+.alkaline:hover {
+    
+    transform: scale(1.1);
+    background: #000;
+    cursor: pointer;
+}
+
+.lanthanide:hover {
+    
+    transform: scale(1.1);
+    background: #000;
+    cursor: pointer;
+}
+
+.actinide:hover {
+    
+    transform: scale(1.1);
+    cursor: pointer;
+    background: #000;
+}
+
+.transition:hover {
+    
+    transform: scale(1.1);
+    cursor: pointer;
+    background: #000;
+}
+
+.post-transition:hover {
+    
+    transform: scale(1.1);
+    cursor: pointer;
+    background: #000;
+}
+
+.metalloid:hover {
+    
+    transform: scale(1.1);
+    cursor: pointer;
+    background: #000;
+}
+
+.reactive-nonmetal:hover {
+    
+    transform: scale(1.1);
+    cursor: pointer;
+    background: #000;
+}
+
+.noble-gas:hover {
+    
+    transform: scale(1.1);
+    cursor: pointer;
+    background: #000;
+}
+
+.unknown:hover {
+    
+    transform: scale(1.1);
+    cursor: pointer;
+    background: #000;
+}
+
+.overextend{
+
+    font-size: 9px;
+}
+
+#element-info {
+    
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    transition: 0.3s;
+}
+
+#element-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#element-info p {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.blur {
+    
+    opacity: 0.5;
+    
+}

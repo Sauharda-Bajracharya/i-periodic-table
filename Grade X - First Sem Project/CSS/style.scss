@@ -1,0 +1,233 @@
+@import url(https:fonts.googleapis.com/css2?family=Quicksand:wght@100;200;300;400;500;600;700&display=swap);
+
+  *{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body{
+
+    font-family: quicksand;
+    color: #000;
+    counter-reset: element;
+  }
+
+  .periodic-table{
+
+    display: grid;
+    grid-gap: 0.3vw;
+    width: 90%;
+    position: relative;
+    left: 5%;
+  }
+
+  .periodic-table > li{
+
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 4.5vw;
+    background:#8BBEE8FF;
+    color: aliceblue; 
+    width: 65px;
+    border-radius: 3px;
+    font-weight:500;
+  }
+
+  .periodic-table > li:before{
+
+    counter-increment: element; 
+    content: counter(element);
+    position: absolute;
+    top: 3.5px;
+    left: 3.5px;
+    font-size: .8vw;
+    font-weight: normal;
+  }
+
+  .periodic-table > li name{
+
+    font-size: 2vw;
+  }
+
+  #helium {
+    grid-column-start: 18;
+  }
+
+  #boron, #aluminium {
+    grid-column-start: 13;
+  }
+
+  #cerium, #thorium {
+    grid-column-start: 4;
+  }
+
+  .periodic-table li.name {
+    text-decoration: none !important;
+  }
+
+  .periodic-table > li:nth-child(n+58):nth-last-child(n+48) {
+    grid-row-start: 8;
+  }
+
+  .periodic-table > li:nth-child(n+90):nth-last-child(n+16) {
+    grid-row-start: 9;
+  }
+
+  .periodic-table:before {
+
+    display: flex;
+    content: '';
+    grid-row: 8 / 10;
+    grid-column: 1 / 4;
+  }
+
+  .periodic-table .noble-gas {
+
+    background:#008C76FF;
+    color: #ffe7e7;
+    border-radius: 3px;
+   }
+
+  .periodic-table .reactive-nonmetal{
+   
+    background:#339E66FF;
+    color: #ffe7e7;
+    border-radius: 3px;
+  }
+
+  .periodic-table .alkali {
+
+    background: #5B84B1FF;
+    color: #d8f8ff;
+    border-radius: 3px;
+  }
+
+  .periodic-table .hydrogen {
+
+    background:#339E66FF;
+    color: #ffe7e7;
+    border-radius: 3px;
+  }
+
+  .periodic-table .alkaline {
+
+    background: #FC766AFF;
+    color: #ffe7e7;
+    border-radius: 3px;
+  }
+
+  .periodic-table .unknown {
+
+    background:#A8D5BAFF;
+    color: #ffe7e7;
+    border-radius: 3px;
+  }
+
+  .periodic-table .lanthanide {
+    
+    background:#BF94E4;
+    color: #ffe7e7;
+    border-radius: 3px;
+  }
+
+  .periodic-table .actinide {
+    
+    background:#A8C66C;
+    color: #ffe7e7;
+    border-radius: 3px;
+  }
+
+  .periodic-table .metalloid {
+
+    background:#078282FF;
+    color: #ffe7e7;
+    border-radius: 3px;
+  }
+
+  .periodic-table .post-transition {
+
+    background:#95DBE5FF;
+    color: #ffe7e7;
+    border-radius: 3px;
+  }
+  
+  .periodic-table #series1{
+
+    margin-top: 2.5vw;
+  }
+
+
+  @media all and (max-width: 1100px) {
+    #helium, #boron, #aluminium, #cerium, #thorium {
+    grid-column-start: auto;
+    }
+    .periodic-table li.name {
+        text-decoration: none;
+    }
+    .periodic-table {
+    grid-template-columns: 1fr 1fr 1fr;
+    }
+    .periodic-table > li name {
+      font-size: 0;
+    }
+    .periodic-table > li {
+      padding: 1rem;
+    }
+    .periodic-table > li name:after {
+      content: attr(title);
+      font-size: 2rem;
+    }
+    .periodic-table > li:before {
+      font-size: 1rem;
+    }
+    .periodic-table > li:nth-child(n+58):nth-last-child(n+48) {
+    grid-row-start: auto !important;
+  }
+    .periodic-table > li:nth-child(n+90):nth-last-child(n+16) {
+      grid-row-start: auto !important;
+    }
+    .periodic-table:before {
+      display: none !important;
+    }
+  }
+  @media all and (max-width: 750px) {
+    body {
+      margin: 2vw;
+    }
+    .periodic-table {
+      grid-template-columns: 1fr 1fr;
+    }
+    .periodic-table > li {
+      height: auto;
+      font-size: 3vw;
+    }
+  }
+  @media all and (max-width: 550px) {
+    .periodic-table {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  
+  ::-webkit-scrollbar-track{
+
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #292727;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar{
+
+    width: 10px;
+    background-color: #000;
+  }
+
+  ::-webkit-scrollbar-thumb{
+
+    background-color: #999;
+    border-radius: 10px;
+  }
