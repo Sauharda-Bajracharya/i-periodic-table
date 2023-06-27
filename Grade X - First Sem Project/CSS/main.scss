@@ -2,13 +2,19 @@
 
     max-block-size: 100%;
     max-height: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+
+*::selection{
+
+    background-color: transparent;
 }
 
 body{
 
     margin: 2vw;
     padding: 8px;
-    background-color: #070b0f;
+    background-color: #F8F9FA;
     background-blend-mode: color-burn;
 }
 
@@ -51,7 +57,7 @@ body{
         justify-content: start;
         position: absolute;
         top: 16%;
-        left: 38%;
+        left: 41%;
         transform: translate(-50%, -50%);
         z-index: 1;
     }
@@ -76,35 +82,40 @@ body{
 
 #buttonalkali{
 
-    color: #5B84B1FF;
+    color: rgb(0, 117, 140);
+    font-weight: 600;
     cursor: pointer;
 
 }
 
 #buttonalkaline{
 
-    color: #FC766AFF;
+    color: rgba(214, 0, 36, 1);
+    font-weight: 600;
     cursor: pointer;
 
 }
 
 #buttonlan{
 
-    color: #BF94E4;
+    color: rgb(0, 51, 85);
+    font-weight: 600;
     cursor: pointer;
 
 }
 
 #buttonact{
 
-    color: #A8C66C;
+    color: rgb(199, 50, 0);
+    font-weight: 600;
     cursor: pointer;
 
 }
 
 #buttontrans{
 
-    color: #8BBEE8FF;
+    color: rgb(98, 50, 236);
+    font-weight: 600;
     cursor: pointer;
 
 }
@@ -112,35 +123,40 @@ body{
 
 #buttonposttrans{
 
-    color: #95DBE5FF;
+    color: rgb(0, 44, 0);
+    font-weight: 600;
     cursor: pointer;
 
 }
 
 #buttonmetalloids{
 
-    color: #078282FF;
+    color: rgb(148, 87, 0);
+    font-weight: 600;
     cursor: pointer;
 
 }
 
 #buttonreact{
 
-    color: #339E66FF;
+    color: rgb(0, 96, 240);
+    font-weight: 600;
     cursor: pointer;
 
 }
 
 #buttonnoble{
 
-    color: #008C76FF;
+    color: rgb(205, 29, 94);
+    font-weight: 600;
     cursor: pointer;
 
 }
 
 #buttonunknown{
 
-    color: #A8D5BAFF;
+    color: rgb(63, 55, 79);
+    font-weight: 600;
     cursor: pointer;
 }
 
@@ -154,74 +170,96 @@ body{
     font-size: 10px;
 }
 
-.alkali:hover {
+.alkali:hover, 
+.alkali:focus, 
+.alkali:active{
     
     transform: scale(1.1);
-    background: #000;
+    
     cursor: pointer;
+    border: 3px solid rgba(0, 117, 140, 1);
+
 }
 
-.alkaline:hover {
+.alkaline:hover,
+.alkaline:focus,
+.alkaline:active{
     
     transform: scale(1.1);
-    background: #000;
+    
     cursor: pointer;
+    border: 3px solid rgba(214, 0, 36, 1);
+
 }
 
 .lanthanide:hover {
     
     transform: scale(1.1);
-    background: #000;
+    
     cursor: pointer;
+    border: 3px solid rgb(0, 51, 85);
+
 }
 
 .actinide:hover {
     
     transform: scale(1.1);
     cursor: pointer;
-    background: #000;
+    
+    border: 3px solid rgb(199, 50, 0);
+
 }
 
 .transition:hover {
     
     transform: scale(1.1);
     cursor: pointer;
-    background: #000;
+    border: 3px solid rgb(98, 50, 236);
+
 }
 
 .post-transition:hover {
     
     transform: scale(1.1);
     cursor: pointer;
-    background: #000;
+    
+    border: 3px solid rgb(0, 44, 0);
+
 }
 
 .metalloid:hover {
     
     transform: scale(1.1);
     cursor: pointer;
-    background: #000;
+    
+    border: 3px solid rgb(148, 87, 0);
+
 }
 
 .reactive-nonmetal:hover {
     
     transform: scale(1.1);
     cursor: pointer;
-    background: #000;
+    
+    border: 3px solid rgb(0, 96, 240);
+
 }
 
 .noble-gas:hover {
     
     transform: scale(1.1);
     cursor: pointer;
-    background: #000;
+    
+    border: 3px solid rgb(205, 29, 94);
 }
 
 .unknown:hover {
     
     transform: scale(1.1);
     cursor: pointer;
-    background: #000;
+    
+    border: 3px solid rgb(63, 55, 79);
+
 }
 
 .overextend{
@@ -232,31 +270,256 @@ body{
 #element-info {
     
     display: none;
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 9999;
+    z-index: 99;
     background-color: rgba(0, 0, 0, 0.8);
     padding: 20px;
     border-radius: 10px;
     color: #fff;
     text-align: center;
     transition: 0.3s;
+    height: 700px;
+    width: 500px;
 }
 
 #element-info h2 {
-    font-size: 24px;
+
+    font-size: 25px;
     margin-bottom: 10px;
 }
 
 #element-info p {
-    font-size: 16px;
+
+    font-size: 20px;
+    font-weight: 450;
     margin-bottom: 0;
+}
+
+#element-subshell{
+
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid lightblue;
+    background: transparent;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    
+  }
+
+  #sub{
+
+    position: absolute;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid lightblue;
+    background: transparent;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    z-index: 999;
+    top: 17.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    
+}
+
+#electron1{
+
+    position: absolute;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #F8F9FA;
+    background: #F8F9FA;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    z-index: 999;
+    top: 17.5%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+#electron1{
+
+    position: absolute;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #F8F9FA;
+    background: #F8F9FA;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    z-index: 999;
+    top: 17.5%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+#electron2{
+
+    position: absolute;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #F8F9FA;
+    background: #F8F9FA;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    z-index: 999;
+    top: 17.5%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+#electron3{
+
+    position: absolute;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #F8F9FA;
+    background: #F8F9FA;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    z-index: 999;
+    top: 17.5%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+#electron4{
+
+    position: absolute;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #F8F9FA;
+    background: #F8F9FA;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    z-index: 999;
+    top: 17.5%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+#electron5{
+
+    position: absolute;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #F8F9FA;
+    background: #F8F9FA;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    z-index: 999;
+    top: 3%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#electron6{
+
+    position: absolute;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #F8F9FA;
+    background: #F8F9FA;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    z-index: 999;
+    top: 31.25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#electron7{
+
+    position: absolute;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #F8F9FA;
+    background: #F8F9FA;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    z-index: 999;
+    top: 28%;
+    left: 37.5%;
+    transform: translate(-50%, -50%);
+}
+
+#electron8{
+
+    position: absolute;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #F8F9FA;
+    background: #F8F9FA;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    z-index: 999;
+    top: 6.5%;
+    left: 63%;
+    transform: translate(-50%, -50%);
 }
 
 .blur {
     
     opacity: 0.5;
-    
+    transition: opacity 0.2s ease;
+}
+
+#element-name{
+
+    margin-top: 50px;
+}
+
+#element-description{
+
+    display: flex;
+    margin-top: 20px;
+    font-size: 18.5px !important;
+    text-align: justify;
+    padding: 20px;
+}
+
+#know-more{
+
+    display: flex;
+    margin-top: 20px;
+    font-size: 16px !important;
+    text-align: justify;
+    padding: 20px;
 }
