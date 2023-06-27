@@ -34,7 +34,9 @@
     <div class="container">
     <ol class="periodic-table">
         <li class="hydrogen reactive-nonmetal alkali" id="alkali" data-atomic-number="1" data-atomic-mass="1.008">
+            <description title="Hydrogen is the chemical element with the symbol H and atomic number 1. It is the lightest element founded by Henry Cavendish in 1766. At standard conditions, it is a odorless, colorless and tasteless gas of diatomic molecules having the formula H2. It is the most abundant chemical substance in the universe, constituting roughly 75% of all normal matter."></description>
             <name title="Hydrogen">H</name>
+            <shell new="new"></shell>
             <span title="Hydrogen" class="info">Hydrogen</span>
         </li>
         <li id="helium" class="noble-gas" data-atomic-number="2" data-atomic-mass="4.0026">
@@ -62,6 +64,8 @@
             <span title="Nitrogen" class="info">Nitrogen</span>
         </li>
         <li class="reactive-nonmetal" data-atomic-number="8" data-atomic-mass="15.999">
+            <more about="Know More"></more>
+            <description title="Oxygen is the chemical elementt with the symbol O and atomic number 8. It is a colorless, odorless and tasteless gas founded by Joseph Priestley and Carl Wilhelm Scheele in 1774. It is noncombustible, but will actively support the burning of combustible materials."></description>
             <name title="Oxygen">O</name>
             <span title="Oxygen" class="info">Oxygen</span>
         </li>
@@ -122,7 +126,7 @@
             <span title="Titanium" class="info">Titanium</span>
         </li>
         <li class="transition">
-            <name title="Vanadium">Ti</name>
+            <name title="Vanadium">V</name>
             <span title="Vanadium" class="info">Vanadium</span>
         </li>
         <li class="transition">
@@ -507,12 +511,24 @@
         </li>
         </ol>
     </div>
-        
+    
     <div id="element-info">
+        <p id="element-subshell">
+            <p id="sub"></p>
+                <p id="electron1"></p>
+                <p id="electron2"></p>
+                <p id="electron3"></p>
+                <p id="electron4"></p>
+                <p id="electron5"></p>
+                <p id="electron6"></p>
+                <p id="electron7"></p>
+                <p id="electron8"></p>
+                <p id="electron9"></p>
+                <p id="electron10"></p>
+        </p>
         <h2 id="element-name"></h2>
         <p id="element-number"></p>
         <p id="element-mass"></p>
-        <p id="element-configuration"></p>
         <p id="element-description"></p>
     </div>
 
@@ -526,63 +542,80 @@ $(document).ready(function() {
             $('.alkali').click(function() {
                 $('.periodic-table li').not('.alkali').addClass('blur');
                 $('.periodic-table .alkali').removeClass('blur');
+                
             });
 
             $('.alkaline').click(function() {
                 $('.periodic-table li').not('.alkaline').addClass('blur');
                 $('.periodic-table .alkaline').removeClass('blur');
+                
             });
 
             $('.metalloid').click(function() {
                 $('.periodic-table li').not('.metalloid').addClass('blur');
                 $('.periodic-table .metalloid').removeClass('blur');
+                
             });
 
             $('.reactive-nonmetal').click(function() {
                 $('.periodic-table li').not('.reactive-nonmetal').addClass('blur');
                 $('.periodic-table .reactive-nonmetal').removeClass('blur');
+                
             });
 
             $('.noble-gas').click(function() {
                 $('.periodic-table li').not('.noble-gas').addClass('blur');
                 $('.periodic-table .noble-gas').removeClass('blur');
+                
             });
 
             $('.transition').click(function() {
                 $('.periodic-table li').not('.transition').addClass('blur');
                 $('.periodic-table .transition').removeClass('blur');
+                
             });
 
             $('.post-transition').click(function() {
                 $('.periodic-table li').not('.post-transition').addClass('blur');
                 $('.periodic-table .post-transition').removeClass('blur');
+                
             });
 
             $('.lanthanide').click(function() {
                 $('.periodic-table li').not('.lanthanide').addClass('blur');
                 $('.periodic-table .lanthanide').removeClass('blur');
+                
             });
 
             $('.actinide').click(function() {
                 $('.periodic-table li').not('.actinide').addClass('blur');
                 $('.periodic-table .actinide').removeClass('blur');
+                
             });
 
             $('.unknown').click(function() {
                 $('.periodic-table li').not('.unknown').addClass('blur');
                 $('.periodic-table .unknown').removeClass('blur');
+                
             });
 
             function resetElements() {
                 $('.periodic-table li').removeClass('blur');
+
             }
 
             $('.navbar li').click(function() {
                 resetElements();
             });
 
-            $('.navbar').click(function() {
-                resetElements();
+            $(document).click(function(event) {
+                var target = $(event.target);
+                var isPeriodicTableElement = target.closest('.periodic-table').length > 0;
+                var isNavbarElement = target.closest('.navbar').length > 0;
+
+                if (!target.closest('.periodic-table li').length && !target.is('.navbar')) {
+                    resetElements();
+                }
             });
         });
 </script>
