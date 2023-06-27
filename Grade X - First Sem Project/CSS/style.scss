@@ -30,8 +30,8 @@
     justify-content: center;
     align-items: center;
     height: 4.5vw;
-    background:#8BBEE8FF;
-    color: aliceblue; 
+    background-color: rgba(98, 50, 236, 0.1);
+    color: rgb(98, 50, 236);
     width: 65px;
     border-radius: 3px;
     font-weight:500;
@@ -44,8 +44,8 @@
     position: absolute;
     top: 3.5px;
     left: 3.5px;
-    font-size: .8vw;
-    font-weight: normal;
+    font-size: .9vw;
+    font-weight: 500;
   }
 
   .periodic-table > li name{
@@ -87,71 +87,72 @@
 
   .periodic-table .noble-gas {
 
-    background:#008C76FF;
-    color: #ffe7e7;
+    background-color: rgba(205, 29, 94, 0.1) !important;
+    color: rgb(205, 29, 94) !important;
     border-radius: 3px;
    }
 
   .periodic-table .reactive-nonmetal{
    
-    background:#339E66FF;
-    color: #ffe7e7;
+    background-color: rgba(0, 96, 240, 0.1) !important;
+    color: rgb(0, 96, 240) !important;
     border-radius: 3px;
   }
 
   .periodic-table .alkali {
 
-    background: #5B84B1FF;
-    color: #d8f8ff;
+    background-color: rgba(0, 117, 140, 0.1) !important;
+    color: rgb(0, 117, 140) !important;
     border-radius: 3px;
   }
 
   .periodic-table .hydrogen {
 
-    background:#339E66FF;
+    background-color: rgba(0, 96, 240, 0.1) !important;
+    color: rgba(0, 96, 240) !important;
     color: #ffe7e7;
     border-radius: 3px;
   }
 
   .periodic-table .alkaline {
 
-    background: #FC766AFF;
-    color: #ffe7e7;
+    background-color: rgba(214, 0, 36, 0.1) !important;
+    color: rgba(214, 0, 36, 1) !important; 
     border-radius: 3px;
   }
 
   .periodic-table .unknown {
 
-    background:#A8D5BAFF;
-    color: #ffe7e7;
+    background-color: rgba(63, 55, 79, 0.1) !important;
+    color: rgb(63, 55, 79) !important;
     border-radius: 3px;
   }
 
   .periodic-table .lanthanide {
     
-    background:#BF94E4;
-    color: #ffe7e7;
+    background-color: rgba(0, 51, 85, 0.1) !important;
+    color: rgb(0, 51, 85) !important;
     border-radius: 3px;
   }
 
   .periodic-table .actinide {
     
-    background:#A8C66C;
-    color: #ffe7e7;
+    background-color: rgba(199, 50, 0, 0.1) !important;
+    color: rgb(199, 50, 0) !important;
     border-radius: 3px;
   }
 
   .periodic-table .metalloid {
 
-    background:#078282FF;
-    color: #ffe7e7;
+    background-color: rgb(148, 87, 0, 0.1) !important;
+    color: rgb(148, 87, 0) !important;
     border-radius: 3px;
   }
 
   .periodic-table .post-transition {
 
-    background:#95DBE5FF;
-    color: #ffe7e7;
+    background-color: rgba(0, 44, 0, 0.1) !important;
+    color: rgb(0, 44, 0) !important;
     border-radius: 3px;
   }
   
