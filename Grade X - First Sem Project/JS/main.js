@@ -23,7 +23,7 @@ $(document).ready(function() {
         var elementMass = $(this).data('atomic-mass');
         var elementConfiguration = $(this).find('electronicConfiguration').text();
         var elementDescription = $(this).find('description').attr('title');
-        var knowMore = $(this).find('more').attr('about');
+        var knowMore = $(this).find('a').attr('about');
         showElementInfo(elementName, elementNumber, elementMass, elementConfiguration, elementDescription, knowMore, elementSubShell);
     });
   
