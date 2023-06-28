@@ -14,7 +14,8 @@ body{
 
     margin: 2vw;
     padding: 8px;
-    background-color: #F8F9FA;
+    background-color: #F8F9FA ;
+    // background-color: #F8F9FA;
     background-blend-mode: color-burn;
 }
 
@@ -519,7 +520,10 @@ body{
 
     display: flex;
     margin-top: 20px;
-    font-size: 16px !important;
-    text-align: justify;
+    font-size: 20px !important;
+    justify-content: center;
+    text-align: center;
     padding: 20px;
+    cursor: pointer;
+    font-weight: 500;
 }
