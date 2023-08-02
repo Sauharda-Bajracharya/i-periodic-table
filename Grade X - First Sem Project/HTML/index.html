@@ -10,7 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Creepster&family=Montserrat&family=Quicksand:wght@500&display=swap" rel="stylesheet">
-    <title>Interactive Period Table</title>
+    <title>Interactive Periodic Table</title>
 </head>
 <body>
 
@@ -34,7 +34,7 @@
     <div class="container">
     <ol class="periodic-table">
         <li class="hydrogen reactive-nonmetal alkali" id="alkali" data-atomic-number="1" data-atomic-mass="1.008">
-            <description title="Hydrogen is the chemical element with the symbol H and atomic number 1. It is the lightest element founded by Henry Cavendish in 1766. At standard conditions, it is a odorless, colorless and tasteless gas of diatomic molecules having the formula H2. It is the most abundant chemical substance in the universe, constituting roughly 75% of all normal matter."></description>
+            <description title="Hydrogen is the chemical element with the symbol H and atomic number 1. It is the lightest element founded by Henry Cavendish in 1766. At standard conditions, it is a odorless, colorless and tasteless gas. It is the most abundant chemical substance in the universe, constituting roughly 75% of all normal matter."></description>
             <name title="Hydrogen">H</name>
             <shell new="new"></shell>
             <span title="Hydrogen" class="info">Hydrogen</span>
@@ -45,36 +45,45 @@
             <span title="Helium" class="info">Helium</span>
         </li>
         <li class="alkali" id="alkali" data-atomic-number="3" data-atomic-mass="6.94">
+            <description title="Lithium is the chemical element with the symbol Li and atomic number 3. It is a soft, silvery-white, highly reactive, and flammable metal. It is the least dense metal and the least dense solid element."></description>
             <name title="Lithium">Li</name>
             <span title="Lithium" class="info">Lithium</span>
         </li>
         <li class="alkaline" data-atomic-number="4" data-atomic-mass="9.0122">
+            <description title="Beryllium is the chemical element with the symbol Be and atomic number 4. It is a steel-gray, strong, lightweight and brittle metal. It is a relatively rare metal which is formed by a supernova, in which heavier nuclei disintegrate, and create this metal."></description>
             <name title="Beryllium">Be</name>
             <span title="Beryllium" class="info">Beryllium</span>
         </li>
         <li id="boron" class="metalloid" data-atomic-number="5" data-atomic-mass="10.81">
+            <description title="Boron is the chemical element with the symbol B and atomic number 5. In its crystalline form it is a brittle, dark, lustrous metalloid. It is the lightest element of the Boron Group (Group 13)."></description>
             <name title="Boron">B</name>
             <span title="Boron" class="info">Boron</span>
         </li>
         <li class="reactive-nonmetal" data-atomic-number="6" data-atomic-mass="12.011">
+            <description title="Carbon is the chemical element with the symbol C and atomic number 6. It is an abundant reactive non-metal which is insoluble in water, dilute acid and bases, as well as organic solvents. Some popular allotropes of Carbon are Graphite(Largely manufactured in pencils) and Diamond(Hardest substance on Earth)."></description>
             <name title="Carbon">C</name>
             <span title="Carbon" class="info">Carbon</span>
         </li>
         <li class="reactive-nonmetal" data-atomic-number="7" data-atomic-mass="14.007">
+            <description title="Nitrogen is the chemical element with the symbol N and atomic number 7. It is a colorless and odorless non-metal and is the most common element in the universe. Nitrogen forms about 78% of the Earth's atmosphere,  it the most abundant uncombined element in air."></description>
             <name title="Nitrogen">N</name>
             <span title="Nitrogen" class="info">Nitrogen</span>
         </li>
         <li class="reactive-nonmetal" data-atomic-number="8" data-atomic-mass="15.999">
-            <a about="Know More" href="https://en.wikipedia.org/wiki/Oxygen"></a>
+            <a href="https://en.wikipedia.org/wiki/Oxygen" about="Know More" target="_blank">
+                <span></span>
+            </a>
             <description title="Oxygen is the chemical element with the symbol O and atomic number 8. It is a colorless, odorless and tasteless gas founded by Joseph Priestley and Carl Wilhelm Scheele in 1774. It is noncombustible, but will actively support the burning of combustible materials."></description>
             <name title="Oxygen">O</name>
             <span title="Oxygen" class="info">Oxygen</span>
         </li>
         <li class="reactive-nonmetal" data-atomic-number="9" data-atomic-mass="18.998">
+            <description title="Fluorine is the chemical element with the symbol F and atomic number 9. Under standard conditions, it is a highly toxic, highly reactive, pale yellow diatomic gas. It is the lightest halogen which was discovered by Henri Moissan in 1886."></description>
             <name title="Fluorine">F</name>
             <span title="Fluorine" class="info">Fluorine</span>
         </li>
         <li class="noble-gas" data-atomic-number="10" data-atomic-mass="20.180">
+            <description title="Neon is the chemical element with the symbol Ne and atomic number 10. Under standard conditions, it is a colorless, odorless, and, inert monatomic gas. It was discovered (along with krypton and xenon) in 1898 as one of the three residual rare inert elements by William Ramsay and Morris Travers."></description>
             <name title="Neon">Ne</name>
             <span title="Neon" class="info">Neon</span>
         </li>
@@ -514,25 +523,32 @@
     </div>
     
     <div id="element-info">
-        <p id="element-subshell">
-            <p id="sub"></p>
-                <p id="electron1"></p>
-                <p id="electron2"></p>
-                <p id="electron3"></p>
-                <p id="electron4"></p>
-                <p id="electron5"></p>
-                <p id="electron6"></p>
-                <p id="electron7"></p>
-                <p id="electron8"></p>
-                <p id="electron9"></p>
-                <p id="electron10"></p>
+
+        <p id="sub">
+            
+                <div id="electron1" class="electron" style="display: none;"></div>
+                <div id="electron2" class="electron" style="display: none;" ></div>
+
+          <p id="element-subshell">
+            
+            <div id="electron3" class="electron" style="display: none;"></div>
+                <div id="electron4" class="electron" style="display: none;"></div>
+                <div id="electron5" class="electron" style="display: none;"></div>
+                <div id="electron6" class="electron" style="display: none;"></div>
+                <div id="electron7" class="electron" style="display: none;"></div>
+                <div id="electron8" class="electron" style="display: none;"></div>
+                <div id="electron9" class="electron" style="display: none;"></div>
+                <div id="electron10" class="electron" style="display: none;"></div>
+
+          </p>
+                
         </p>
         <h2 id="element-name"></h2>
         <p id="element-number"></p>
         <p id="element-mass"></p>
         <p id="element-description"></p>
         <a id="know-more"></a>
-    </div>
+    </p>
 
 </body>
 
@@ -620,9 +636,10 @@ $(document).ready(function() {
                 }
             });
         });
+
+        
 </script>
 <script src="../JS/script.js"></script>
 <script src="../JS/main.js"></script>
-<script src="../JS/elem.js"></script>
 
 </html>
