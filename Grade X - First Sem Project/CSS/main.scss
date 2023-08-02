@@ -15,8 +15,6 @@ body{
     margin: 2vw;
     padding: 8px;
     background-color: #F8F9FA ;
-    // background-color: #F8F9FA;
-    background-blend-mode: color-burn;
 }
 
 .navbar{
@@ -496,6 +494,42 @@ body{
     transform: translate(-50%, -50%);
 }
 
+#electron9{
+
+    position: absolute;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #F8F9FA;
+    background: #F8F9FA;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    z-index: 999;
+    top: 6.5%;
+    left: 37%;
+    transform: translate(-50%, -50%);
+}
+
+#electron10{
+
+    position: absolute;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #F8F9FA;
+    background: #F8F9FA;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    z-index: 999;
+    top: 28%;
+    left: 63%;
+    transform: translate(-50%, -50%);
+}
+
 .blur {
     
     opacity: 0.5;
@@ -518,12 +552,23 @@ body{
 
 #know-more{
 
+    position: relative;
     display: flex;
     margin-top: 20px;
-    font-size: 20px !important;
+    font-size: 24px !important;
     justify-content: center;
     text-align: center;
-    padding: 20px;
+    padding: 10px 20px;
     cursor: pointer;
     font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: lightblue;
+    left: 25%;
+    background: #090909e6;
+    width: 210px;
+    transition: .2s ease-in-out;
+    border: 3px solid lightblue;
+    z-index: 999999999;
 }
+  
